@@ -56,15 +56,13 @@ function load(fileContent) {
 }
 
 function validate(fileContent) {
-    const attributes = load(fileContent);
-    const validator = new YipValidator(attributes);
-  
-    return {
-      isValid: validator.isValid(),
-      errors: validator.errors(),
-    };
-  }
-  
-  module.exports = { validate };
+  const attributes = load(fileContent);
+  const validator = new YipValidator(attributes);
+
+  return {
+    isValid: validator.isValid(),
+    errors: validator.errors(),
+  };
+}
 
 module.exports = { validate };
