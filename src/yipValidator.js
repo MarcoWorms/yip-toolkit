@@ -55,7 +55,7 @@ function load(fileContent) {
   return parsed.attributes;
 }
 
-function validate(fileContent) {
+export function validate(fileContent) {
   const attributes = load(fileContent);
   const validator = new YipValidator(attributes);
 
@@ -64,5 +64,3 @@ function validate(fileContent) {
     errors: validator.errors(),
   };
 }
-
-module.exports = { validate };
