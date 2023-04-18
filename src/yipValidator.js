@@ -64,10 +64,10 @@ class YipValidator {
 
     if (
       this['discussions-to'] &&
-      !/^https:\/\/gov\.yearn\.finance\/.+$/.test(this['discussions-to'])
+      !/^https:\/\/gov\.yearn\.finance\/.+|^<create a new thread on https:\/\/gov\.yearn\.finance\/ and drop the link here>$/.test(this['discussions-to'])
     ) {
       errors.push(
-        'Invalid discussions-to link. Must be a link to gov.yearn.finance.'
+        'Invalid discussions-to link. Must be a link to gov.yearn.finance or the placeholder text.'
       );
     }
 
