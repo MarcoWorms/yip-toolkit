@@ -101,3 +101,34 @@ input[type="checkbox"] {
   text-align: center;
   margin-top: 20px;
 }
+
+/* Dark mode adjustments */
+.dark-mode button {
+  background-color: #7986cb;
+}
+
+.dark-mode button:hover {
+  background-color: #5c6bc0;
+}
+
+.dark-mode textarea,
+.dark-mode input,
+.dark-mode select {
+  background-color: #424242;
+  color: #fff;
+  border: 1px solid #616161;
+}
+
+.dark-mode .valid {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.dark-mode .invalid {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.dark-mode form {
+  background-color: #424242;
+}
