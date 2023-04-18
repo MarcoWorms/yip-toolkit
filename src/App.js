@@ -51,6 +51,17 @@ function App() {
     setValidationResult(validate(text));
   };
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedYIP).then(
+      () => {
+        // alert("Generated YIP copied to clipboard!");
+      },
+      (err) => {
+        console.error("Could not copy text: ", err);
+      }
+    );
+  };
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
@@ -203,9 +214,15 @@ function App() {
         )}
         <button type="submit">Generate YIP</button>
       </form>
-      <h2>Generated YIP:</h2>
-      <textarea value={generatedYIP} readOnly rows="20" cols="50" />
-      <div className="dark-mode-toggle">
+      {generatedYIP && (
+        <>
+          <textarea value={generatedYIP} readOnly rows="20" cols="50" />
+          <button type="button" onClick={handleCopy} disabled={!generatedYIP}>
+            Copy Generated YIP
+          </button>
+        </>
+      )}
+      {/* <div className="dark-mode-toggle">
         <label>
           Dark Mode:
           <input
@@ -214,7 +231,7 @@ function App() {
             onChange={toggleDarkMode}
           />
         </label>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -4,19 +4,19 @@
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #f5f5f5;
+  background-color: #F4F4F4;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode {
-  background-color: #333;
-  color: #fff;
+  background-color: #424242;
+  color: #FFFFFF;
 }
 
 h1 {
   text-align: center;
-  color: #3f51b5;
+  color: #0675F9;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -27,7 +27,7 @@ textarea {
   box-sizing: border-box;
   font-family: monospace;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #EBEBEB;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -36,7 +36,7 @@ button {
   display: block;
   margin: 10px auto;
   padding: 10px 20px;
-  background-color: #3f51b5;
+  background-color: #0675F9;
   color: white;
   border: none;
   border-radius: 5px;
@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-  background-color: #283593;
+  background-color: #0056D6;
 }
 
 .valid,
@@ -58,17 +58,17 @@ button:hover {
 }
 
 .valid {
-  background-color: #e8f5e9;
-  color: #388e3c;
+  background-color: #E8F5E9;
+  color: #388E3C;
 }
 
 .invalid {
-  background-color: #ffebee;
-  color: #d32f2f;
+  background-color: #FFEBEE;
+  color: #D32F2F;
 }
 
 form {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -86,7 +86,7 @@ select {
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: 1px solid #EBEBEB;
   border-radius: 5px;
   font-size: 14px;
   margin-bottom: 20px;
@@ -104,31 +104,35 @@ input[type="checkbox"] {
 
 /* Dark mode adjustments */
 .dark-mode button {
-  background-color: #7986cb;
+  background-color: #7986CB;
 }
 
 .dark-mode button:hover {
-  background-color: #5c6bc0;
+  background-color: #5C6BC0;
 }
 
 .dark-mode textarea,
 .dark-mode input,
 .dark-mode select {
   background-color: #424242;
-  color: #fff;
+  color: #FFFFFF;
   border: 1px solid #616161;
 }
 
 .dark-mode .valid {
-  background-color: #4caf50;
-  color: #fff;
+  background-color: #4CAF50;
+  color: #FFFFFF;
 }
 
 .dark-mode .invalid {
-  background-color: #f44336;
-  color: #fff;
+  background-color: #F44336;
+  color: #FFFFFF;
 }
 
 .dark-mode form {
+  background-color: #424242;
+}
+
+.dark-mode body {
   background-color: #424242;
 }
