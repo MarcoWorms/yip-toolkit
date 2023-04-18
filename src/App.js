@@ -68,6 +68,16 @@ function App() {
 
   return (
     <div className={`App${darkMode ? ' dark-mode' : ''}`}>
+      <a href="https://github.com/MarcoWorms/yip-toolkit" target="_blank">
+        <img decoding="async" loading="lazy" width="149" height="149"
+         src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+         alt="Fork me on GitHub" style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+
+          }} /> 
+      </a>
       <h1>YIP Validator</h1>
       <form onSubmit={handleValidate}>
         <textarea
