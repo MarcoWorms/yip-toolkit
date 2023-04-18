@@ -23,7 +23,7 @@ export function generateYIP(options) {
 
   const templateData = {
     yipNumberAssigned,
-    yipNumber: yipNumberAssigned ? yipNumber : '<to be assigned>',
+    yipNumber: yipNumberAssigned ? yipNumber : '666',
     yipAuthor: yipAuthor || 'Anon',
     yipDateCreated: yipDateCreated || getTodayISO8601(),
     yipStatus: yipStatus || 'WIP',

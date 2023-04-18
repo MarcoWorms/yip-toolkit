@@ -84,8 +84,10 @@ export function validate(fileContent) {
   const attributes = load(fileContent);
   const validator = new YipValidator(attributes);
 
+  const errors = validator.errors();
+
   return {
-    isValid: validator.isValid(),
-    errors: validator.errors(),
+    isValid: errors.length === 0,
+    errors: errors,
   };
 }

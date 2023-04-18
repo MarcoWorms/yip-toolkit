@@ -14,7 +14,7 @@ export default function yipTemplate(data) {
 yip: ${yipNumber}
 title: ${yipTitle}
 author: ${yipAuthor} (@${yipAuthorGithubUsername})
-discussions-to: <reate a new thread on https://gov.yearn.finance/ and drop the link here>
+discussions-to: <create a new thread on https://gov.yearn.finance/ and drop the link here>
 status: ${yipStatus}
 type: ${yipType}${yipType === 'Standards Track' ? `\ncategory: ${yipCategory}\n` : ''}
 created: ${yipDateCreated}
