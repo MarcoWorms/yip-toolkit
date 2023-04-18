@@ -4,6 +4,10 @@ const frontMatter = require('front-matter');
 class YipValidator {
   constructor(attributes) {
     Object.assign(this, attributes);
+    this.created = new Date(this.created).getFullYear()
+    + '-' + (new Date(this.created).getMonth() + 1).toString().padStart(2, '0')
+    + '-' + new Date(this.created).getDate().toString().padStart(2, '0')
+    console.log(this.created)
   }
 
   isValid() {
@@ -54,7 +58,8 @@ class YipValidator {
       );
     }
 
-    if (this.created && !/^\d{4}-\d{2}-\d{2}$/.test(this.created)) {
+    if (this.created && !this.isValidDate(this.created)) {
+      console.log(this.created)
       errors.push('Invalid date format. Must be in yyyy-mm-dd format.');
     }
 
@@ -72,6 +77,11 @@ class YipValidator {
     }
 
     return errors;
+  }
+
+  isValidDate(dateString) {
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    return dateRegex.test(dateString);
   }
 }
 

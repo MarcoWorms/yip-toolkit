@@ -136,7 +136,9 @@ function App() {
           <input
             type="date"
             value={yipDateCreated}
-            onChange={(e) => setYipDateCreated(e.target.value)}
+            onChange={(e) =>
+              setYipDateCreated(e.target.value)
+            }
           />
         </label>
         {yipNumberAssigned && (
