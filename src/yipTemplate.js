@@ -13,7 +13,7 @@ export default function yipTemplate(data) {
   return `---
 yip: ${yipNumber}
 title: ${yipTitle}
-author: ${yipAuthor} (@${yipAuthorGithubUsername})
+author: ${yipAuthor}
 discussions-to: <create a new thread on https://gov.yearn.finance/ and drop the link here>
 status: ${yipStatus}
 type: ${yipType}${yipType === 'Standards Track' ? `\ncategory: ${yipCategory}\n` : ''}

@@ -4,10 +4,6 @@ const frontMatter = require('front-matter');
 class YipValidator {
   constructor(attributes) {
     Object.assign(this, attributes);
-    this.created = new Date(this.created).getFullYear()
-    + '-' + (new Date(this.created).getMonth() + 1).toString().padStart(2, '0')
-    + '-' + new Date(this.created).getDate().toString().padStart(2, '0')
-    console.log(this.created)
   }
 
   isValid() {
@@ -87,11 +83,14 @@ class YipValidator {
 
 function load(fileContent) {
   const parsed = frontMatter(fileContent);
+  console.log(parsed)
+  parsed.attributes.created = parsed.frontmatter.split('\n').find((line) => line.startsWith('created:')).split('created:')[1].trim();
   return parsed.attributes;
 }
 
 export function validate(fileContent) {
   const attributes = load(fileContent);
+  
   const validator = new YipValidator(attributes);
 
   const errors = validator.errors();
