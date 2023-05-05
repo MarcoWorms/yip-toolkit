@@ -78,6 +78,9 @@ function App() {
 
           }} /> 
       </a>
+      <div style={{display:'flex', justifyContent: 'center', marginBottom: 40}}>
+        <img width="200" src="./logo.png"/>
+      </div>
       <h1>YIP Validator</h1>
       <form onSubmit={handleValidate}>
         <textarea

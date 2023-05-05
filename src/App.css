@@ -19,7 +19,7 @@
 
 h1 {
   text-align: center;
-  color: #0675F9;
+  color: black;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -39,7 +39,7 @@ button {
   display: block;
   margin: 10px auto;
   padding: 10px 20px;
-  background-color: #0675F9;
+  background-color: black;
   color: white;
   border: none;
   border-radius: 5px;
@@ -49,7 +49,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056D6;
+  background-color: grey;
 }
 
 .valid,
@@ -107,11 +107,11 @@ input[type="checkbox"] {
 
 /* Dark mode adjustments */
 .dark-mode button {
-  background-color: #7986CB;
+  background-color: grey;
 }
 
 .dark-mode button:hover {
-  background-color: #5C6BC0;
+  background-color: grey;
 }
 
 .dark-mode textarea,
